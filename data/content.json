@@ -1,6 +1,22 @@
 {
-  "generatedAt": "2026-11-08T10:57:43.676919Z",
+  "generatedAt": "2026-11-08T10:59:41.256533Z",
   "items": [
+    {
+      "date": "2025-01-21",
+      "title": "《Git 进阶技巧》—— 提升 44% 开发效率的 13 个隐藏功能",
+      "description": "挖掘 Git 官方文档很少提及的高级用法：多阶段构建优化、内存堆快照对比、工作树分离、网络条件模拟、BuildKit 缓存挂载、性能面板火焰图、动态变量、内置终端分屏。实测可减少 43% 样板代码、加速调试循环。配合示例配置文件直接落地。",
+      "category": "效率工具",
+      "readTime": 12,
+      "url": "https://git-scm.com/doc"
+    },
+    {
+      "date": "2025-01-22",
+      "title": "《SQLite Internals 实战指南》—— 从入门到生产级应用",
+      "description": "深度解析 SQLite Internals 核心原理、最佳实践、常见坑与性能调优。包含完整项目代码、架构图解、部署清单。适合 存储引擎爱好者 系统学习。",
+      "category": "数据库",
+      "readTime": 20,
+      "url": "https://www.sqlite.org/arch.html"
+    },
     {
       "date": "2025-01-20",
       "title": "《WebAssembly Component Model 实战指南》—— 从入门到生产级应用",
