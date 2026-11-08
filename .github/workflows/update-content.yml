@@ -50,6 +50,7 @@ jobs:
       - name: 📝 提交并推送变更
         if: steps.generate.outputs.changed != '0'
         run: |
+          git pull --rebase
           git add data/content.json
           git commit -m "📅 更新每日内容 ($(date +%Y-%m-%d))"
           git push
