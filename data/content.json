@@ -1,0 +1,141 @@
+{
+  "generatedAt": "2026-11-08T09:19:47.646027Z",
+  "items": [
+    {
+      "date": "2025-01-16",
+      "title": "《Docker 进阶技巧》—— 提升 33% 开发效率的 12 个隐藏功能",
+      "description": "挖掘 Docker 官方文档很少提及的高级用法：Lighthouse CI、commit-graph 加速、远程隧道、预请求脚本、Mock Server 自动生成、性能面板火焰图。实测可减少 44% 样板代码、加速调试循环。配合示例配置文件直接落地。",
+      "category": "效率工具",
+      "readTime": 12,
+      "url": "https://github.com/docker/docker"
+    },
+    {
+      "date": "2025-01-17",
+      "title": "《HTMX + Go Templates 实战指南》—— 从入门到生产级应用",
+      "description": "深度解析 HTMX + Go Templates 核心原理、最佳实践、常见坑与性能调优。包含完整项目代码、架构图解、部署清单。适合 Go Web 开发者 系统学习。",
+      "category": "可观测性",
+      "readTime": 26,
+      "url": "https://github.com/trending/htmx-+-go-templates"
+    },
+    {
+      "date": "2025-01-15",
+      "title": "GitHub Copilot 新功能：Agent 模式让 AI 直接操作代码库",
+      "description": "GitHub 正式推出 Copilot Agent 模式，AI 可以自主阅读、编辑、运行测试、修复 Bug，甚至创建 PR。这是从「副驾驶」到「自动驾驶」的关键一步。",
+      "category": "AI 编程工具",
+      "readTime": 8,
+      "url": "https://github.blog/news-insights/product-news/github-copilot-agent-mode/"
+    },
+    {
+      "date": "2025-01-14",
+      "title": "TypeScript 5.8 发布：更快的类型检查、新的装饰器语法",
+      "description": "TS 5.8 带来 ~20% 类型检查速度提升、标准化装饰器、更好的模块解析、严格的 null 检查优化。升级指南与破坏性变更全解析。",
+      "category": "前端工程化",
+      "readTime": 12,
+      "url": "https://devblogs.microsoft.com/typescript/announcing-typescript-5-8/"
+    },
+    {
+      "date": "2025-01-13",
+      "title": "《系统设计面试指南》—— 从零设计支撑百万 QPS 的短链服务",
+      "description": "手把手拆解短链系统设计：ID 生成策略、存储选型、缓存层、一致性保证、监控告警。附带真实面试追问与回答要点。",
+      "category": "系统设计",
+      "readTime": 25,
+      "url": "https://github.com/donnemartin/system-design-primer"
+    },
+    {
+      "date": "2025-01-12",
+      "title": "React 19 正式版核心特性深度解析：Actions、useOptimistic、Server Components",
+      "description": "React 19 引入 Actions 统一表单处理、useOptimistic 乐观更新、Server Components 零包体积渲染、ref 清理自动化。迁移清单与最佳实践。",
+      "category": "前端框架",
+      "readTime": 18,
+      "url": "https://react.dev/blog/2024/12/05/react-19"
+    },
+    {
+      "date": "2025-01-11",
+      "title": "Bun 1.2 发布：原生支持 TypeScript、更快的包管理器、Windows 完整支持",
+      "description": "Bun 1.2 带来零配置 TS 运行、bun install 比 npm 快 5 倍、原生测试运行器、Windows 生产就绪。是否该把 CI/CD 迁移到 Bun？",
+      "category": "运行时工具",
+      "readTime": 10,
+      "url": "https://bun.sh/blog/bun-v1.2"
+    },
+    {
+      "date": "2025-01-10",
+      "title": "Tailwind CSS v4.0：基于 Lightning CSS、零配置、原生 CSS 变量支持",
+      "description": "Tailwind v4 重写底层引擎，构建速度提升 10 倍，支持原生 CSS 嵌套、变量、容器查询。不再需要 PostCSS，直接用 Vite/Webpack 插件。",
+      "category": "CSS 框架",
+      "readTime": 14,
+      "url": "https://tailwindcss.com/blog/tailwindcss-v4"
+    },
+    {
+      "date": "2025-01-09",
+      "title": "《分布式系统唯一 ID 生成方案对比》—— Snowflake vs UUID vs ULID vs NanoID",
+      "description": "深度对比 4 种主流 ID 生成算法：生成速度、存储大小、有序性、碰撞概率、时钟回拨处理。附带 Go/Java/JS 生产级实现代码。",
+      "category": "后端架构",
+      "readTime": 16,
+      "url": "https://github.com/uuid/uuid"
+    },
+    {
+      "date": "2025-01-08",
+      "title": "Vite 6.0 发布：环境 API、更快的 HMR、原生浏览器测试运行器",
+      "description": "Vite 6 引入 Environment API 统一 SSR/SSG/边缘构建、HMR 延迟降低 50%、内置 Vitest 浏览器模式、实验性 RSPack 支持。",
+      "category": "构建工具",
+      "readTime": 11,
+      "url": "https://vite.dev/blog/announcing-vite6"
+    },
+    {
+      "date": "2025-01-07",
+      "title": "《如何写好技术文档》—— Google 技术写作课程精华笔记",
+      "description": "Google 内部技术写作培训公开版：读者分析、结构化写作、主动语态、代码示例规范、API 文档模板。程序员必修的沟通技能。",
+      "category": "工程文化",
+      "readTime": 20,
+      "url": "https://developers.google.com/tech-writing"
+    },
+    {
+      "date": "2025-01-06",
+      "title": "PostgreSQL 17 新特性：增量备份、并行 vacuum、JSONB 操作符增强",
+      "description": "PG 17 带来 pg_basebackup 增量模式、并行 vacuum 加速维护、jsonb_path_query_first、更好的分区表剪枝。生产升级检查清单。",
+      "category": "数据库",
+      "readTime": 13,
+      "url": "https://www.postgresql.org/docs/release/17.0/"
+    },
+    {
+      "date": "2025-01-05",
+      "title": "Obsidian + Git 同步方案：打造程序员专属的知识库工作流",
+      "description": "用 Git 管理 Obsidian 仓库，配合 GitHub Actions 自动同步、GitHub Pages 发布数字花园、Git 可视化插件。本地优先、永久拥有数据。",
+      "category": "效率工具",
+      "readTime": 15,
+      "url": "https://github.com/obsidianmd/obsidian-git"
+    },
+    {
+      "date": "2025-01-04",
+      "title": "《Rust 入门指南：从所有权系统到异步编程》—— 给 JS/Go 开发者的速成教程",
+      "description": "对比 JS/Go 视角讲 Rust 核心概念：所有权/借用/生命周期、模式匹配、错误处理、Trait、async/await、Pin/Unpin。附带实战练习项目。",
+      "category": "编程语言",
+      "readTime": 30,
+      "url": "https://rust-book.cs.brown.edu/"
+    },
+    {
+      "date": "2025-01-03",
+      "title": "GitHub Actions 实战：自动化依赖更新、安全扫描、发布流水线",
+      "description": "从零搭建生产级 CI/CD：Dependabot 自动升级、CodeQL 代码扫描、语义化版本发布、Docker 多平台构建、Slack 通知。完整 YAML 配置。",
+      "category": "DevOps",
+      "readTime": 22,
+      "url": "https://docs.github.com/en/actions"
+    },
+    {
+      "date": "2025-01-02",
+      "title": "《Web 性能优化清单 2025》—— Core Web Vitals、流式渲染、边缘计算",
+      "description": "LCP/INP/CLS 优化实战：流式 SSR、关键 CSS 内联、字体子集化、Service Worker 缓存策略、Edge 函数预渲染。Lighthouse 100 分实战。",
+      "category": "Web 性能",
+      "readTime": 18,
+      "url": "https://web.dev/learn/performance"
+    },
+    {
+      "date": "2025-01-01",
+      "title": "新年特辑：2025 年值得关注的 10 个开源项目趋势",
+      "description": "AI 编程助手本地化、WASM 边缘运行时、类型安全全栈框架、本地优先软件、Rust 重写基础设施、声明式基础设施、隐私计算……",
+      "category": "技术趋势",
+      "readTime": 12,
+      "url": "https://github.com/trending"
+    }
+  ]
+}

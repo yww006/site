@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>每日资源导航 | Daily Resource Navigation</title>
+  <meta name="description" content="每天精选一个优质资源：技术文章、开源工具、设计灵感、学习教程、效率神器">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <div class="bg-layer" aria-hidden="true">
+    <div class="bg-image" id="bgImage"></div>
+    <div class="bg-overlay"></div>
+    <div class="bg-particles" id="bgParticles"></div>
+  </div>
+
+  <header class="header">
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">
+          <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M12 6v6l4 2"/>
+          </svg>
+          <span class="logo-text">每日资源导航</span>
+        </div>
+        <div class="header-meta">
+          <span class="date" id="currentDate"></span>
+          <span class="day-count" id="dayCount">第 <strong>1</strong> 天</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+    <div class="container">
+      <section class="hero" id="hero">
+        <div class="hero-badge">今日精选</div>
+        <h1 class="hero-title" id="heroTitle">加载中...</h1>
+        <p class="hero-desc" id="heroDesc"></p>
+        <div class="hero-meta">
+          <span class="hero-category" id="heroCategory"></span>
+          <span class="hero-read-time" id="heroReadTime"></span>
+        </div>
+        <a href="#" class="hero-cta" id="heroCta" target="_blank" rel="noopener noreferrer">
+          <span>查看资源</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </a>
+      </section>
+
+      <section class="archive" aria-labelledby="archiveTitle">
+        <div class="section-header">
+          <h2 id="archiveTitle">历史精选</h2>
+          <button class="btn-load-more" id="loadMoreBtn">加载更多</button>
+        </div>
+        <div class="archive-grid" id="archiveGrid"></div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>每日更新 · 数据来源：<a href="https://github.com/yww006/site" target="_blank">GitHub</a> · 部署：GitHub Pages</p>
+      <p class="footer-note">第 <span id="totalDays">0</span> 天持续输出中...</p>
+    </div>
+  </footer>
+
+  <script src="assets/script.js"></script>
+</body>
+</html>

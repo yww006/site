@@ -1,0 +1,90 @@
+name: 📅 每日内容自动更新
+
+on:
+  schedule:
+    # 每天 UTC 0:00 (北京时间 8:00) 运行
+    - cron: '0 0 * * *'
+  workflow_dispatch:  # 手动触发
+  push:
+    paths:
+      - 'update_content.py'  # 脚本更新时也运行
+
+permissions:
+  contents: write  # 需要推送提交
+
+jobs:
+  update-content:
+    name: 生成并提交每日内容
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: 📥 检出仓库
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+
+      - name: 🐍 设置 Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+
+      - name: 📦 安装依赖
+        run: |
+          pip install --upgrade pip
+          # 标准库即可，无额外依赖
+
+      - name: 🔄 生成每日内容
+        id: generate
+        run: |
+          python update_content.py
+          echo "changed=$(git diff --name-only data/content.json | wc -l)" >> $GITHUB_OUTPUT
+
+      - name: 📝 提交并推送变更
+        if: steps.generate.outputs.changed != '0'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/content.json
+          git commit -m "📅 更新每日内容 ($(date +%Y-%m-%d))"
+          git push
+
+      - name: 📋 输出结果
+        run: |
+          if [ "${{ steps.generate.outputs.changed }}" = "0" ]; then
+            echo "✅ 无新内容需更新"
+          else
+            echo "✅ 已更新每日内容并推送"
+            git log -1 --oneline
+          fi
+
+  # 可选：部署到 GitHub Pages
+  deploy-pages:
+    name: 部署到 GitHub Pages
+    needs: update-content
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: 📥 检出仓库
+        uses: actions/checkout@v4
+
+      - name: 🔧 设置 Pages
+        uses: actions/configure-pages@v4
+
+      - name: 📦 上传构建产物
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: '.'
+
+      - name: 🚀 部署到 GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
