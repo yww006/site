@@ -1,6 +1,14 @@
 {
-  "generatedAt": "2026-11-08T11:54:16.457919Z",
+  "generatedAt": "2026-11-08T11:56:36.835864Z",
   "items": [
+    {
+      "date": "2025-01-26",
+      "title": "《eBPF Observability 实战指南》—— 从入门到生产级应用",
+      "description": "深度解析 eBPF Observability 核心原理、最佳实践、常见坑与性能调优。包含完整项目代码、架构图解、部署清单。适合 SRE/平台 系统学习。",
+      "category": "Linux 内核",
+      "readTime": 22,
+      "url": "https://ebpf.io/what-is-ebpf/"
+    },
     {
       "date": "2025-01-25",
       "title": "《Temporal.io Workflow 实战指南》—— 从入门到生产级应用",
