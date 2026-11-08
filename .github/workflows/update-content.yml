@@ -25,6 +25,12 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           fetch-depth: 0
 
+      - name: 🔄 同步远程最新
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git pull --rebase
+
       - name: 🐍 设置 Python
         uses: actions/setup-python@v5
         with:
@@ -44,9 +50,6 @@ jobs:
       - name: 📝 提交并推送变更
         if: steps.generate.outputs.changed != '0'
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git pull --rebase
           git add data/content.json
           git commit -m "📅 更新每日内容 ($(date +%Y-%m-%d))"
           git push
