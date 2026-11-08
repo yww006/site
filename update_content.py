@@ -11,36 +11,51 @@ import sys
 from datetime import datetime, timedelta
 from pathlib import Path
 
-# 预置资源池（实际使用时可替换为爬虫/API获取）
+# 预置资源池：每个主题配对真实可访问的 URL
 TOPICS = [
-    ("React Server Components", "前端框架", "React 开发者", 20),
-    ("Rust Async Runtime", "系统编程", "后端工程师", 25),
-    ("Kubernetes Operator Pattern", "云原生", "平台工程师", 30),
-    ("WebAssembly Component Model", "WebAssembly", "全栈开发者", 18),
-    ("PostgreSQL Logical Replication", "数据库", "DBA/后端", 15),
-    ("eBPF Observability", "Linux 内核", "SRE/平台", 22),
-    ("GraphQL Federation", "API 设计", "架构师", 16),
-    ("Temporal.io Workflow", "分布式系统", "后端工程师", 24),
-    ("Zig Language Basics", "编程语言", "系统程序员", 18),
-    ("SQLite Internals", "数据库", "存储引擎爱好者", 20),
-    ("HTMX + Go Templates", "全栈开发", "Go Web 开发者", 14),
-    ("Bun Native APIs", "运行时工具", "Node.js 开发者", 12),
-    ("Tailwind CSS v4 Migration", "CSS 框架", "前端工程师", 10),
-    ("Vite Plugin Development", "构建工具", "工具链工程师", 16),
-    ("OpenTelemetry Auto-Instrumentation", "可观测性", "SRE/后端", 18),
+    ("React Server Components", "前端框架", "React 开发者", 20,
+     "https://react.dev/learn/server-components"),
+    ("Rust Async Runtime", "系统编程", "后端工程师", 25,
+     "https://rust-lang.github.io/async-book/"),
+    ("Kubernetes Operator Pattern", "云原生", "平台工程师", 30,
+     "https://kubernetes.io/docs/concepts/extend-kubernetes/operator/"),
+    ("WebAssembly Component Model", "WebAssembly", "全栈开发者", 18,
+     "https://github.com/WebAssembly/component-model"),
+    ("PostgreSQL Logical Replication", "数据库", "DBA/后端", 15,
+     "https://www.postgresql.org/docs/current/logical-replication.html"),
+    ("eBPF Observability", "Linux 内核", "SRE/平台", 22,
+     "https://ebpf.io/what-is-ebpf/"),
+    ("GraphQL Federation", "API 设计", "架构师", 16,
+     "https://www.apollographql.com/docs/federation/"),
+    ("Temporal.io Workflow", "分布式系统", "后端工程师", 24,
+     "https://docs.temporal.io/workflows"),
+    ("Zig Language Basics", "编程语言", "系统程序员", 18,
+     "https://ziglang.org/learn/"),
+    ("SQLite Internals", "数据库", "存储引擎爱好者", 20,
+     "https://www.sqlite.org/arch.html"),
+    ("HTMX + Go Templates", "全栈开发", "Go Web 开发者", 14,
+     "https://htmx.org/essays/"),
+    ("Bun Native APIs", "运行时工具", "Node.js 开发者", 12,
+     "https://bun.sh/docs/api/"),
+    ("Tailwind CSS v4 Migration", "CSS 框架", "前端工程师", 10,
+     "https://tailwindcss.com/docs/upgrade-guide"),
+    ("Vite Plugin Development", "构建工具", "工具链工程师", 16,
+     "https://vite.dev/guide/api-plugin.html"),
+    ("OpenTelemetry Auto-Instrumentation", "可观测性", "SRE/后端", 18,
+     "https://opentelemetry.io/docs/zero-code/"),
 ]
 
 RESOURCE_POOL = []
-for topic, category, audience, read_time in TOPICS:
+for topic, category, audience, read_time, url in TOPICS:
     RESOURCE_POOL.append({
         "title": f"《{topic} 实战指南》—— 从入门到生产级应用",
         "description": f"深度解析 {topic} 核心原理、最佳实践、常见坑与性能调优。包含完整项目代码、架构图解、部署清单。适合 {audience} 系统学习。",
         "category": category,
         "readTime": str(read_time),
-        "url": f"https://github.com/trending/{topic.lower().replace(' ', '-').replace('.', '')}",
+        "url": url,
     })
 
-# 额外的单条资源模板
+# 额外的单条资源模板（使用真实 URL）
 SINGLE_RESOURCES = [
     {
         "title": "GitHub Trending 今日榜单：{date} 最热开源项目",
@@ -54,9 +69,18 @@ SINGLE_RESOURCES = [
         "description": "挖掘 {tool} 官方文档很少提及的高级用法：{features}。实测可减少 {percent}% 样板代码、加速调试循环。配合示例配置文件直接落地。",
         "category": "效率工具",
         "readTime": 12,
-        "url": "https://github.com/{tool_lower}/{tool_lower}",
+        "url": "",  # 将在运行时根据 tool 填充真实 URL
     }
 ]
+
+# 工具名到真实文档/官网 URL 的映射
+TOOL_URLS = {
+    "VS Code": "https://code.visualstudio.com/docs",
+    "Git": "https://git-scm.com/doc",
+    "Docker": "https://docs.docker.com/",
+    "Postman": "https://learning.postman.com/docs/",
+    "Chrome DevTools": "https://developer.chrome.com/docs/devtools/",
+}
 
 TOOLS_DATA = [
     ("VS Code", 40, 12, "多光标重构、任务自动化、远程隧道、内置终端分屏"),
@@ -72,7 +96,7 @@ for tool, percent, count, features in TOOLS_DATA:
         "description": f"挖掘 {tool} 官方文档很少提及的高级用法：{{features}}。实测可减少 {{percent}}% 样板代码、加速调试循环。配合示例配置文件直接落地。",
         "category": "效率工具",
         "readTime": 12,
-        "url": f"https://github.com/{tool.lower().replace(' ', '-')}/{tool.lower().replace(' ', '-')}",
+        "url": TOOL_URLS.get(tool, f"https://github.com/{tool.lower().replace(' ', '-')}/{tool.lower().replace(' ', '-')}"),
     })
 
 CATEGORIES = [
@@ -102,24 +126,15 @@ def generate_next_date(latest_date: str) -> str:
     return next_dt.strftime("%Y-%m-%d")
 
 def pick_random_resource(date_str: str) -> dict:
-    """从资源池随机挑选并填充模板"""
-    template = random.choice(RESOURCE_POOL)
-    topic = random.choice([t[0] for t in TOPICS])
-    category = random.choice(CATEGORIES)
-    read_time = random.randint(10, 30)
-
+    """从资源池随机挑选一个完整条目（已对齐 title/description/category/url）"""
+    entry = random.choice(RESOURCE_POOL)
     return {
         "date": date_str,
-        "title": template["title"].format(topic=topic),
-        "description": template["description"].format(
-            topic=topic,
-            audience="相关开发者",
-            category=category,
-            read_time=str(read_time)
-        ),
-        "category": category,
-        "readTime": read_time,
-        "url": template["url"].format(topic_lower=topic.lower().replace(" ", "-").replace(".", "")),
+        "title": entry["title"],
+        "description": entry["description"],
+        "category": entry["category"],
+        "readTime": int(entry["readTime"]),
+        "url": entry["url"],
     }
 
 def maybe_add_trending(date_str: str, items: list) -> dict | None:
@@ -154,7 +169,7 @@ def maybe_add_trending(date_str: str, items: list) -> dict | None:
                 ),
                 "category": template["category"],
                 "readTime": template["readTime"],
-                "url": template["url"].format(tool_lower=tool.lower().replace(" ", "-")),
+                "url": TOOL_URLS.get(tool, f"https://github.com/{tool.lower().replace(' ', '-')}/{tool.lower().replace(' ', '-')}"),
             }
     return None
 
@@ -201,7 +216,7 @@ def main():
 
     print(f"已生成 {len(items_to_add)} 条新内容，日期：{next_date}")
     for item in items_to_add:
-        print(f"  - {item['title']} ({item['category']})")
+        print(f"  - {item['title']} ({item['category']}) -> {item['url']}")
 
     return 0
 
