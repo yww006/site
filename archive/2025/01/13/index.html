@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title id="pageTitle">《系统设计面试指南》—— 从零设计支撑百万 QPS 的短链服务 | 每日资源导航</title>
+  <meta name="description" id="pageDescription" content="手把手拆解短链系统设计：ID 生成策略、存储选型、缓存层、一致性保证、监控告警。附带真实面试追问与回答要点。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/style.css">
+</head>
+<body>
+  <div class="bg-layer" aria-hidden="true">
+    <div class="bg-image" id="bgImage"></div>
+    <div class="bg-overlay"></div>
+    <div class="bg-particles" id="bgParticles"></div>
+  </div>
+
+  <header class="header">
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">
+          <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M12 6v6l4 2"/>
+          </svg>
+          <span class="logo-text">每日资源导航</span>
+        </div>
+        <nav class="header-nav">
+          <a href="../../" class="nav-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M19 12H5M12 19l-7-7 7-7"/>
+            </svg>
+            返回首页
+          </a>
+          <a href="../../archive/" class="nav-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+              <line x1="16" y1="2" x2="16" y2="6"/>
+              <line x1="8" y1="2" x2="8" y2="6"/>
+              <line x1="3" y1="10" x2="21" y2="10"/>
+            </svg>
+            历史
+          </a>
+        </nav>
+        <div class="header-meta">
+          <span class="date" id="currentDate"></span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+    <div class="container">
+      <nav class="breadcrumb" id="breadcrumb" aria-label="面包屑导航">      <a href="../../">首页</a>
+      <svg class="breadcrumb-sep" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+      <a href="../../archive/">历史归档</a>
+      <svg class="breadcrumb-sep" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+      <a href="../2025/">2025年</a>
+      <svg class="breadcrumb-sep" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+      <a href="../2025/01/">1月</a>
+      <svg class="breadcrumb-sep" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+      <span class="breadcrumb-current">01月13日 周一</span></nav>
+
+      <section class="day-hero" id="dayHero">
+        <div class="day-badge" id="dayBadge">2025年01月13日 星期一</div>
+        <h1 class="day-title" id="dayTitle">《系统设计面试指南》—— 从零设计支撑百万 QPS 的短链服务</h1>
+        <p class="day-desc" id="dayDesc">手把手拆解短链系统设计：ID 生成策略、存储选型、缓存层、一致性保证、监控告警。附带真实面试追问与回答要点。</p>
+        <div class="day-meta">
+          <span class="day-category" id="dayCategory">系统设计</span>
+          <span class="day-read-time" id="dayReadTime">25 分钟阅读</span>
+        </div>
+        <a href="https://github.com/donnemartin/system-design-primer" class="day-cta" id="dayCta" target="_blank" rel="noopener noreferrer">
+          <span>查看资源</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </a>
+      </section>
+
+      <section class="day-nav" id="dayNav" aria-label="上一篇/下一篇">
+        <a href="#" class="day-nav-link prev" id="prevLink" style="display:none;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M15 18l-6-6 6-6"/>
+          </svg>
+          <span>上一日</span>
+        </a>
+        <a href="#" class="day-nav-link next" id="nextLink" style="display:none;">
+          <span>下一日</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M9 6l6 6-6 6"/>
+          </svg>
+        </a>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>每日更新 · 数据来源：<a href="https://github.com/yww006/site" target="_blank">GitHub</a> · 部署：GitHub Pages</p>
+    </div>
+  </footer>
+
+  <script src="../../assets/script.js"></script>
+  <script src="../../assets/day.js"></script>
+</body>
+</html>
