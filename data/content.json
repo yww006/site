@@ -1,6 +1,14 @@
 {
-  "generatedAt": "2026-11-08T09:19:47.646027Z",
+  "generatedAt": "2026-11-08T09:21:37.886594Z",
   "items": [
+    {
+      "date": "2025-01-18",
+      "title": "《React Server Components 实战指南》—— 从入门到生产级应用",
+      "description": "深度解析 React Server Components 核心原理、最佳实践、常见坑与性能调优。包含完整项目代码、架构图解、部署清单。适合 React 开发者 系统学习。",
+      "category": "数据库",
+      "readTime": 11,
+      "url": "https://github.com/trending/react-server-components"
+    },
     {
       "date": "2025-01-16",
       "title": "《Docker 进阶技巧》—— 提升 33% 开发效率的 12 个隐藏功能",
