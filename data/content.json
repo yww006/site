@@ -1,6 +1,14 @@
 {
-  "generatedAt": "2026-11-08T10:56:11.963962Z",
+  "generatedAt": "2026-11-08T10:57:43.676919Z",
   "items": [
+    {
+      "date": "2025-01-20",
+      "title": "《WebAssembly Component Model 实战指南》—— 从入门到生产级应用",
+      "description": "深度解析 WebAssembly Component Model 核心原理、最佳实践、常见坑与性能调优。包含完整项目代码、架构图解、部署清单。适合 全栈开发者 系统学习。",
+      "category": "WebAssembly",
+      "readTime": 18,
+      "url": "https://github.com/WebAssembly/component-model"
+    },
     {
       "date": "2025-01-19",
       "title": "《Temporal.io Workflow 实战指南》—— 从入门到生产级应用",
