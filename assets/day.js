@@ -62,7 +62,11 @@
 
   function updateDateDisplay() {
     const today = new Date();
-    const localTodayStr = today.toLocaleDateString('zh-CN', { timeZone: 'Asia/Shanghai' }).replace(/\//g, '-');
+    // 使用 Asia/Shanghai 时区，手动格式化为 YYYY-MM-DD (零填充)
+    const year = today.getFullYear();
+    const month = String(today.getMonth() + 1).padStart(2, '0');
+    const day = String(today.getDate()).padStart(2, '0');
+    const localTodayStr = `${year}-${month}-${day}`;
     els.currentDate.textContent = formatDate(localTodayStr, { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
   }
 
