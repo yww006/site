@@ -506,6 +506,39 @@ def generate_all_day_pages(items: list, template_path: Path, archive_dir: Path):
         except Exception as e:
             print(f"  Warning: Failed to generate {item['date']}: {e}")
     print("Day detail pages generated")
+    
+    # Generate redirect pages at root level: /YYYY-MM-DD/ -> /archive/YYYY/MM/DD/
+    print("Generating redirect pages...")
+    generate_redirect_pages(items)
+    print("Redirect pages generated")
+
+def generate_redirect_pages(items: list):
+    """Generate redirect pages at root level: /YYYY-MM-DD/ -> /archive/YYYY/MM/DD/"""
+    for item in items:
+        date_str = item["date"]
+        year, month, day = date_str.split('-')
+        dir_name = f"{year}-{month}-{day}"
+        redirect_dir = Path(dir_name)
+        redirect_dir.mkdir(parents=True, exist_ok=True)
+        
+        html = f'''<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="refresh" content="0; url=/site/archive/{year}/{month}/{day}/">
+  <link rel="canonical" href="/site/archive/{year}/{month}/{day}/">
+  <title>重定向中...</title>
+</head>
+<body>
+  <p>正在跳转到 <a href="/site/archive/{year}/{month}/{day}/">{date_str}</a>...</p>
+  <script>window.location.href = "/site/archive/{year}/{month}/{day}/";</script>
+</body>
+</html>'''
+        
+        output_path = redirect_dir / "index.html"
+        with open(output_path, 'w', encoding='utf-8') as f:
+            f.write(html)
+    print(f"  Generated {len(items)} redirect pages at root level")
 
 def main():
     json_path = Path("data/content.json")
