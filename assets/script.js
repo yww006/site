@@ -144,11 +144,11 @@
   // ========================================
   function updateDateDisplay() {
     const today = new Date();
-    const todayStr = today.toISOString().split('T')[0];
+    const localTodayStr = today.toLocaleDateString('zh-CN', { timeZone: 'Asia/Shanghai' }).replace(/\//g, '-');
+    
+    els.currentDate.textContent = formatDate(localTodayStr, { weekday: 'long' });
 
-    els.currentDate.textContent = formatDate(todayStr, { weekday: 'long' });
-
-    const dayNum = daysBetween(CONFIG.startDate, todayStr);
+    const dayNum = daysBetween(CONFIG.startDate, localTodayStr);
     els.dayCount.innerHTML = `第 <strong>${dayNum}</strong> 天`;
     els.totalDays.textContent = dayNum;
   }
