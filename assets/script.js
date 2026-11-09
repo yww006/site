@@ -171,8 +171,11 @@
   }
 
   function renderHero() {
-    const today = new Date().toISOString().split('T')[0];
-    const todayItem = state.allContent.find(item => item.date === today);
+    const today = new Date();
+    const todayStr = today.toISOString().split('T')[0]; // UTC date for comparison
+    const localTodayStr = today.toLocaleDateString('zh-CN', { timeZone: 'Asia/Shanghai' }).replace(/\//g, '-');
+    // Use local date for comparison to match content.json dates
+    const todayItem = state.allContent.find(item => item.date === localTodayStr) || state.allContent.find(item => item.date === todayStr);
     const item = todayItem || state.allContent[0]; // 兜底显示第一条
 
     if (!item) {
@@ -204,9 +207,10 @@
       els.archiveGrid.innerHTML = '';
     }
 
-    const today = new Date().toISOString().split('T')[0];
+    const today = new Date();
+    const localTodayStr = today.toLocaleDateString('zh-CN', { timeZone: 'Asia/Shanghai' }).replace(/\//g, '-');
     const historyItems = state.allContent
-      .filter(item => item.date !== today)
+      .filter(item => item.date !== localTodayStr)
       .sort((a, b) => b.date.localeCompare(a.date));
 
     const nextItems = historyItems.slice(

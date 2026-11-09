@@ -39,8 +39,8 @@
 
   function updateDateDisplay() {
     const today = new Date();
-    const todayStr = today.toISOString().split('T')[0];
-    els.currentDate.textContent = formatDate(todayStr, { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
+    const localTodayStr = today.toLocaleDateString('zh-CN', { timeZone: 'Asia/Shanghai' }).replace(/\//g, '-');
+    els.currentDate.textContent = formatDate(localTodayStr, { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
   }
 
   function formatDate(dateStr, options = {}) {
