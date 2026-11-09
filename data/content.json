@@ -1,6 +1,14 @@
 {
-  "generatedAt": "2026-11-08T12:02:51.401804Z",
+  "generatedAt": "2026-11-09T04:52:06.994074Z",
   "items": [
+    {
+      "date": "2026-11-09",
+      "title": "《Chrome DevTools 进阶技巧》—— 提升 42% 开发效率的 13 个隐藏功能",
+      "description": "挖掘 Chrome DevTools 官方文档很少提及的高级用法：reflog 恢复、工作树分离、任务自动化、性能面板火焰图、动态变量、多光标重构。实测可减少 30% 样板代码、加速调试循环。配合示例配置文件直接落地。",
+      "category": "效率工具",
+      "readTime": 12,
+      "url": "https://code.visualstudio.com/docs"
+    },
     {
       "date": "2026-11-08",
       "title": "每日资源导航站点上线：自动化归档系统正式运行",
