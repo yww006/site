@@ -513,10 +513,12 @@ def generate_all_day_pages(items: list, template_path: Path, archive_dir: Path):
     print("Redirect pages generated")
 
 def generate_redirect_pages(items: list):
-    """Generate redirect pages at root level: /YYYY-MM-DD/ -> /archive/YYYY/MM/DD/"""
+    """Generate redirect pages at root level and site/ subdirectory: /YYYY-MM-DD/ -> /archive/YYYY/MM/DD/"""
     for item in items:
         date_str = item["date"]
         year, month, day = date_str.split('-')
+        
+        # Root level redirect (for direct access)
         dir_name = f"{year}-{month}-{day}"
         redirect_dir = Path(dir_name)
         redirect_dir.mkdir(parents=True, exist_ok=True)
@@ -538,7 +540,14 @@ def generate_redirect_pages(items: list):
         output_path = redirect_dir / "index.html"
         with open(output_path, 'w', encoding='utf-8') as f:
             f.write(html)
-    print(f"  Generated {len(items)} redirect pages at root level")
+        
+        # Also create under site/ subdirectory for GitHub Pages project site
+        site_redirect_dir = Path("site") / dir_name
+        site_redirect_dir.mkdir(parents=True, exist_ok=True)
+        with open(site_redirect_dir / "index.html", 'w', encoding='utf-8') as f:
+            f.write(html)
+    
+    print(f"  Generated {len(items)} redirect pages at root and site/ level")
 
 def main():
     json_path = Path("data/content.json")
