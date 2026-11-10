@@ -1,6 +1,14 @@
 {
-  "generatedAt": "2026-11-09T04:52:06.994074Z",
+  "generatedAt": "2026-11-10T08:05:42.593372Z",
   "items": [
+    {
+      "date": "2026-11-10",
+      "title": "《Bun Native APIs 实战指南》—— 从入门到生产级应用",
+      "description": "深度解析 Bun Native APIs 核心原理、最佳实践、常见坑与性能调优。包含完整项目代码、架构图解、部署清单。适合 Node.js 开发者 系统学习。",
+      "category": "运行时工具",
+      "readTime": 12,
+      "url": "https://bun.sh/docs/api/"
+    },
     {
       "date": "2026-11-09",
       "title": "《Chrome DevTools 进阶技巧》—— 提升 42% 开发效率的 13 个隐藏功能",
