@@ -1,6 +1,14 @@
 {
-  "generatedAt": "2026-11-11T07:35:43.379318Z",
+  "generatedAt": "2026-11-12T08:02:41.398744Z",
   "items": [
+    {
+      "date": "2026-11-12",
+      "title": "《Temporal.io Workflow 实战指南》—— 从入门到生产级应用",
+      "description": "深度解析 Temporal.io Workflow 核心原理、最佳实践、常见坑与性能调优。包含完整项目代码、架构图解、部署清单。适合 后端工程师 系统学习。",
+      "category": "分布式系统",
+      "readTime": 24,
+      "url": "https://docs.temporal.io/workflows"
+    },
     {
       "date": "2026-11-11",
       "title": "《Temporal.io Workflow 实战指南》—— 从入门到生产级应用",
