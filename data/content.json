@@ -1,6 +1,14 @@
 {
-  "generatedAt": "2026-11-12T08:02:41.398744Z",
+  "generatedAt": "2026-11-13T07:41:26.263027Z",
   "items": [
+    {
+      "date": "2026-11-13",
+      "title": "《PostgreSQL Logical Replication 实战指南》—— 从入门到生产级应用",
+      "description": "深度解析 PostgreSQL Logical Replication 核心原理、最佳实践、常见坑与性能调优。包含完整项目代码、架构图解、部署清单。适合 DBA/后端 系统学习。",
+      "category": "数据库",
+      "readTime": 15,
+      "url": "https://www.postgresql.org/docs/current/logical-replication.html"
+    },
     {
       "date": "2026-11-12",
       "title": "《Temporal.io Workflow 实战指南》—— 从入门到生产级应用",
