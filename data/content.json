@@ -1,6 +1,14 @@
 {
-  "generatedAt": "2026-11-13T07:41:26.263027Z",
+  "generatedAt": "2026-11-14T07:28:14.255529Z",
   "items": [
+    {
+      "date": "2026-11-14",
+      "title": "《Rust Async Runtime 实战指南》—— 从入门到生产级应用",
+      "description": "深度解析 Rust Async Runtime 核心原理、最佳实践、常见坑与性能调优。包含完整项目代码、架构图解、部署清单。适合 后端工程师 系统学习。",
+      "category": "系统编程",
+      "readTime": 25,
+      "url": "https://rust-lang.github.io/async-book/"
+    },
     {
       "date": "2026-11-13",
       "title": "《PostgreSQL Logical Replication 实战指南》—— 从入门到生产级应用",
