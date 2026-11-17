@@ -1,6 +1,14 @@
 {
-  "generatedAt": "2026-11-16T07:45:15.393895Z",
+  "generatedAt": "2026-11-17T08:54:22.035317Z",
   "items": [
+    {
+      "date": "2026-11-17",
+      "title": "《Kubernetes Operator Pattern 实战指南》—— 从入门到生产级应用",
+      "description": "深度解析 Kubernetes Operator Pattern 核心原理、最佳实践、常见坑与性能调优。包含完整项目代码、架构图解、部署清单。适合 平台工程师 系统学习。",
+      "category": "云原生",
+      "readTime": 30,
+      "url": "https://kubernetes.io/docs/concepts/extend-kubernetes/operator/"
+    },
     {
       "date": "2026-11-16",
       "title": "《Postman 进阶技巧》—— 提升 40% 开发效率的 15 个隐藏功能",
