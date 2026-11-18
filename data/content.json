@@ -1,6 +1,14 @@
 {
-  "generatedAt": "2026-11-17T08:54:22.035317Z",
+  "generatedAt": "2026-11-18T08:18:55.793631Z",
   "items": [
+    {
+      "date": "2026-11-18",
+      "title": "《React Server Components 实战指南》—— 从入门到生产级应用",
+      "description": "深度解析 React Server Components 核心原理、最佳实践、常见坑与性能调优。包含完整项目代码、架构图解、部署清单。适合 React 开发者 系统学习。",
+      "category": "前端框架",
+      "readTime": 20,
+      "url": "https://react.dev/learn/server-components"
+    },
     {
       "date": "2026-11-17",
       "title": "《Kubernetes Operator Pattern 实战指南》—— 从入门到生产级应用",
