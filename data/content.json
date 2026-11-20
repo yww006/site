@@ -1,6 +1,14 @@
 {
-  "generatedAt": "2026-11-19T08:31:07.960019Z",
+  "generatedAt": "2026-11-20T08:12:59.871113Z",
   "items": [
+    {
+      "date": "2026-11-20",
+      "title": "《Postman 进阶技巧》—— 提升 45% 开发效率的 11 个隐藏功能",
+      "description": "挖掘 Postman 官方文档很少提及的高级用法：Compose Watch、Buildx 多平台、Mock Server 自动生成、动态变量。实测可减少 38% 样板代码、加速调试循环。配合示例配置文件直接落地。",
+      "category": "效率工具",
+      "readTime": 12,
+      "url": "https://code.visualstudio.com/docs"
+    },
     {
       "date": "2026-11-19",
       "title": "《Temporal.io Workflow 实战指南》—— 从入门到生产级应用",
