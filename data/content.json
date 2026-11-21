@@ -1,6 +1,14 @@
 {
-  "generatedAt": "2026-11-20T08:12:59.871113Z",
+  "generatedAt": "2026-11-21T08:05:51.249382Z",
   "items": [
+    {
+      "date": "2026-11-21",
+      "title": "《HTMX + Go Templates 实战指南》—— 从入门到生产级应用",
+      "description": "深度解析 HTMX + Go Templates 核心原理、最佳实践、常见坑与性能调优。包含完整项目代码、架构图解、部署清单。适合 Go Web 开发者 系统学习。",
+      "category": "全栈开发",
+      "readTime": 14,
+      "url": "https://htmx.org/essays/"
+    },
     {
       "date": "2026-11-20",
       "title": "《Postman 进阶技巧》—— 提升 45% 开发效率的 11 个隐藏功能",
