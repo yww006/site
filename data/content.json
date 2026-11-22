@@ -1,6 +1,14 @@
 {
-  "generatedAt": "2026-11-21T08:05:51.249382Z",
+  "generatedAt": "2026-11-22T07:51:43.548042Z",
   "items": [
+    {
+      "date": "2026-11-22",
+      "title": "《SQLite Internals 实战指南》—— 从入门到生产级应用",
+      "description": "深度解析 SQLite Internals 核心原理、最佳实践、常见坑与性能调优。包含完整项目代码、架构图解、部署清单。适合 存储引擎爱好者 系统学习。",
+      "category": "数据库",
+      "readTime": 20,
+      "url": "https://www.sqlite.org/arch.html"
+    },
     {
       "date": "2026-11-21",
       "title": "《HTMX + Go Templates 实战指南》—— 从入门到生产级应用",
