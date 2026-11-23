@@ -1,6 +1,14 @@
 {
-  "generatedAt": "2026-11-22T07:51:43.548042Z",
+  "generatedAt": "2026-11-23T08:42:29.284049Z",
   "items": [
+    {
+      "date": "2026-11-23",
+      "title": "《HTMX + Go Templates 实战指南》—— 从入门到生产级应用",
+      "description": "深度解析 HTMX + Go Templates 核心原理、最佳实践、常见坑与性能调优。包含完整项目代码、架构图解、部署清单。适合 Go Web 开发者 系统学习。",
+      "category": "全栈开发",
+      "readTime": 14,
+      "url": "https://htmx.org/essays/"
+    },
     {
       "date": "2026-11-22",
       "title": "《SQLite Internals 实战指南》—— 从入门到生产级应用",
