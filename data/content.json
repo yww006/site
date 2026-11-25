@@ -1,6 +1,14 @@
 {
-  "generatedAt": "2026-11-24T10:44:37.746329Z",
+  "generatedAt": "2026-11-25T09:39:55.673529Z",
   "items": [
+    {
+      "date": "2026-11-25",
+      "title": "《Git 进阶技巧》—— 提升 38% 开发效率的 12 个隐藏功能",
+      "description": "挖掘 Git 官方文档很少提及的高级用法：集合运行器、BuildKit 缓存挂载、多阶段构建优化、Buildx 多平台、内置终端分屏、任务自动化、内存堆快照对比。实测可减少 35% 样板代码、加速调试循环。配合示例配置文件直接落地。",
+      "category": "效率工具",
+      "readTime": 12,
+      "url": "https://learning.postman.com/docs/"
+    },
     {
       "date": "2026-11-24",
       "title": "《Bun Native APIs 实战指南》—— 从入门到生产级应用",
