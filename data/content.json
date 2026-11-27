@@ -1,6 +1,14 @@
 {
-  "generatedAt": "2026-11-26T09:15:59.566834Z",
+  "generatedAt": "2026-11-27T09:30:27.513788Z",
   "items": [
+    {
+      "date": "2026-11-27",
+      "title": "《Vite Plugin Development 实战指南》—— 从入门到生产级应用",
+      "description": "深度解析 Vite Plugin Development 核心原理、最佳实践、常见坑与性能调优。包含完整项目代码、架构图解、部署清单。适合 工具链工程师 系统学习。",
+      "category": "构建工具",
+      "readTime": 16,
+      "url": "https://vite.dev/guide/api-plugin.html"
+    },
     {
       "date": "2026-11-26",
       "title": "《Kubernetes Operator Pattern 实战指南》—— 从入门到生产级应用",
