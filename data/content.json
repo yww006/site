@@ -1,6 +1,14 @@
 {
-  "generatedAt": "2026-11-27T09:30:27.513788Z",
+  "generatedAt": "2026-11-28T08:43:54.188510Z",
   "items": [
+    {
+      "date": "2026-11-28",
+      "title": "GitHub Trending 今日榜单：2026-11-28 最热开源项目",
+      "description": "GitHub 官方 Trending 页面今日榜单精选：13 个最值得关注的新项目，涵盖 AI、基础设施、开发工具、前端框架等方向。附带 Star 增长趋势分析。",
+      "category": "技术趋势",
+      "readTime": 8,
+      "url": "https://github.com/trending"
+    },
     {
       "date": "2026-11-27",
       "title": "《Vite Plugin Development 实战指南》—— 从入门到生产级应用",
